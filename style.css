@@ -125,24 +125,6 @@ main {
 	padding: 0 15px;
 }
 
-.ibg {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
-}
-
-.ibg img {
-	width: 0;
-	height: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	visibility: hidden;
-}
-
-
 .hero {
 	height: 100vh;
 	margin-bottom: 1000px;
@@ -160,7 +142,7 @@ main {
 	row-gap: 60px;
 }
 
-.hero__add,
+.hero__add:not(.hidden),
 .hero__search,
 .hero__login {
 	width: 100%;
@@ -220,6 +202,10 @@ main {
 	justify-content: center;
 }
 
+.hero__info{
+
+}
+
 .hero__result {
 	border-top: 2px solid #000;
 	width: 100%;
@@ -248,5 +234,3 @@ main {
 	padding: 30px 40px;
 }
 
-
-.hero__add {}

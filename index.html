@@ -19,7 +19,7 @@
 							<div class="hero__action">
 								<button id="loginButton" class="hero__btn">Sign in with Google to add a note</button>
 							</div>
-							<p id="userInfo"></p>
+							<p id="userInfo" class="hero__info"></p>
 						</div>
 						<div class="hero__add hidden">
 							<h2 class="hero__subtitle">Add a note</h2>
@@ -27,7 +27,7 @@
 								<input type="text" id="addInput" class="hero__input" placeholder="Type here">
 								<button id="addButton" class="hero__btn">Add</button>
 							</div>
-							<p id="addResult"></p>
+							<p id="addResult" class="hero__info"></p>
 						</div>
 						<div class="hero__search">
 							<h2 class="hero__subtitle">Search for an album or artist</h2>
@@ -75,7 +75,7 @@
 			signInWithPopup(auth, provider)
 				.then(result => {
 					document.getElementById('userInfo').textContent = `You are logged in as: ${result.user.email}`;
-					document.querySelector('.hero__add').style.display = 'block';
+					document.querySelector('.hero__add').classList.remove("hidden");
 				})
 				.catch(err => alert('Login error: ' + err.message));
 		});
