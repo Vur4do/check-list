@@ -202,8 +202,8 @@ main {
 	justify-content: center;
 }
 
-.hero__info{
-
+.hero__info {
+	margin-top: 20px;
 }
 
 .hero__result {
@@ -233,4 +233,3 @@ main {
 	width: 100%;
 	padding: 30px 40px;
 }
-
