@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Done List</title>
+	<script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/11.0.0/firebase-database.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<section class="hero">
+				<div class="hero__container container">
+					<div class="hero__content">
+						<div class="hero__login">
+							<h1 class="hero__title">Albums list</h1>
+							<div class="hero__action">
+								<button id="loginButton" class="hero__btn">Sign in with Google to add a note</button>
+							</div>
+							<p id="userInfo"></p>
+						</div>
+						<div class="hero__add hidden">
+							<h2 class="hero__subtitle">Add a note</h2>
+							<div class="hero__action">
+								<input type="text" id="addInput" class="hero__input" placeholder="Type here">
+								<button id="addButton" class="hero__btn">Add</button>
+							</div>
+							<p id="addResult"></p>
+						</div>
+						<div class="hero__search">
+							<h2 class="hero__subtitle">Search for an album or artist</h2>
+							<div class="hero__action">
+								<input type="text" class="hero__input" id="searchInput" placeholder="Type here">
+								<button class="hero__btn" id="searchButton">Search</button>
+							</div>
+							<div class="hero__result">
+								<p class="hero__result-text" id="searchResult"></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>
