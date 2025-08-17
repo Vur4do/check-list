@@ -196,6 +196,13 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: 0.2s;
+}
+
+@media (any-hover: hover) {
+	.hero__btn:hover {
+		background-color: #222222;
+	}
 }
 
 .hero__info {

@@ -34,6 +34,7 @@
 							<div class="hero__action">
 								<input type="text" class="hero__input" id="searchInput" placeholder="Type here">
 								<button class="hero__btn" id="searchButton">Search</button>
+								<button class="hero__btn" id="displayAllButton">Display all</button>
 							</div>
 							<div class="hero__result">
 								<p class="hero__result-text" id="searchResult"></p>
@@ -92,6 +93,17 @@
 			resultElement.innerHTML = matches.length > 0
 				? `${matches.length} match(es) found:<br><br>${matches.join('<br><br>')}`
 				: 'Nothing found.';
+		});
+
+		// Відображення всього
+		document.getElementById('displayAllButton').addEventListener('click', async () => {
+			const resultElement = document.getElementById('searchResult');
+
+			const snapshot = await get(ref(db, 'texts'));
+			const data = snapshot.val() || {};
+			const values = Object.values(data);
+
+			resultElement.innerHTML = `${values.length} match(es) found:<br><br>${values.join('<br><br>')}`;
 		});
 
 		// Додавання нового запису
